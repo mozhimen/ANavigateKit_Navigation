@@ -1,4 +1,4 @@
-package com.mozhimen.navigatek.navigation.bar.bases
+package com.mozhimen.navigatek.bar.bases
 
 import androidx.annotation.DrawableRes
 import androidx.fragment.app.Fragment
