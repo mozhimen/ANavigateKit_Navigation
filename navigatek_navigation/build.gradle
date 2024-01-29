@@ -34,7 +34,14 @@ dependencies {
     api 'androidx.navigation:navigation-fragment-ktx:2.5.3'
     api 'androidx.navigation:navigation-ui-ktx:2.5.3'
 
-    implementation project(':SwiftKit:basick')
+//    println("project.name: " + project.name)
+//    println("project.path: " + project.path)
+//    println("rootProject.name: " + rootProject.name)
+    if (rootProject.name == "SwiftKit") {
+        implementation project(':basick')
+    } else {
+        implementation project(':SwiftKit:basick')
+    }
 
     //test
     testImplementation 'junit:junit:4.13.2'
