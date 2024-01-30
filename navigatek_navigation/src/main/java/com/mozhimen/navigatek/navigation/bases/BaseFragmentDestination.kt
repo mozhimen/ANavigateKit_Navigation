@@ -7,8 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.NavDestination
 import androidx.navigation.NavigatorProvider
 import androidx.navigation.fragment.R
-import com.mozhimen.basick.utilk.android.content.UtilKResource
-
+import com.mozhimen.basick.utilk.android.content.UtilKResources
 
 /**
  * @ClassName BaseDestination
@@ -41,7 +40,7 @@ class BaseFragmentDestination(fragmentNavigator: BaseFragmentNavigator) : NavDes
     @CallSuper
     override fun onInflate(context: Context, attrs: AttributeSet) {
         super.onInflate(context, attrs)
-        UtilKResource.obtainAttributes(context, attrs, R.styleable.FragmentNavigator).use { array ->
+        UtilKResources.obtainAttributes(context, attrs, R.styleable.FragmentNavigator).use { array ->
             val className = array.getString(R.styleable.FragmentNavigator_android_name)
             className?.let { setClassName(it) }
         }
