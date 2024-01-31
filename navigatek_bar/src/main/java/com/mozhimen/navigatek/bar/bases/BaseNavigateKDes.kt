@@ -9,11 +9,11 @@ open class BaseNavigateKDes(
     val name: String,
     var fragmentClazzName: String,
     var onInvokeFragment: I_AListener<Fragment>,
-    @DrawableRes val stateResId: Int = 0,
-    @DrawableRes val selectedResId: Int = 0,
-    @DrawableRes val unSelectResId: Int = 0
+    @DrawableRes val intResState: Int = 0,
+    @DrawableRes val intResSelected: Int = 0,
+    @DrawableRes val intResUnSelect: Int = 0
 ){
     override fun toString(): String {
-        return "BaseNavigateKDes(id='$id', name='$name', fragmentClazzName='$fragmentClazzName', onInvokeFragment=$onInvokeFragment, stateResId=$stateResId, selectedResId=$selectedResId, unSelectResId=$unSelectResId)"
+        return "BaseNavigateKDes(id='$id', name='$name', fragmentClazzName='$fragmentClazzName', onInvokeFragment=$onInvokeFragment, intResState=$intResState, intResSelected=$intResSelected, intResUnSelect=$intResUnSelect)"
     }
 }
