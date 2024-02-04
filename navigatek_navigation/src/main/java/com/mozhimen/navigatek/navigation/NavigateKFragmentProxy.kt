@@ -4,9 +4,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.LifecycleOwner
 import androidx.navigation.NavController
-import com.mozhimen.basick.lintk.optin.OptInApiInit_ByLazy
+import com.mozhimen.basick.lintk.optins.OApiInit_ByLazy
 import com.mozhimen.basick.elemk.androidx.lifecycle.bases.BaseWakeBefDestroyLifecycleObserver
-import com.mozhimen.basick.lintk.optin.OptInApiCall_BindLifecycle
+import com.mozhimen.basick.lintk.optins.OApiCall_BindLifecycle
 import com.mozhimen.basick.utilk.androidx.lifecycle.runOnMainThread
 import com.mozhimen.navigatek.navigation.helpers.getDestinationId
 import com.mozhimen.navigatek.navigation.helpers.startDestinationId
@@ -19,8 +19,8 @@ import com.mozhimen.navigatek.navigation.mos.MNavigateKConfig
  * @Date 2023/2/17 16:44
  * @Version 1.0
  */
-@OptInApiCall_BindLifecycle
-@OptInApiInit_ByLazy
+@OApiCall_BindLifecycle
+@OApiInit_ByLazy
 class NavigateKFragmentProxy<A>(
     private val _activity: FragmentActivity,
     private val _fragment: A,
