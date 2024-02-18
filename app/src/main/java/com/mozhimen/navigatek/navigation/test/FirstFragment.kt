@@ -5,8 +5,8 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mozhimen.basick.elemk.androidx.fragment.bases.BaseFragmentVB
 import com.mozhimen.basick.elemk.mos.MKey
-import com.mozhimen.basick.lintk.optin.OptInApiCall_BindLifecycle
-import com.mozhimen.basick.lintk.optin.OptInApiInit_ByLazy
+import com.mozhimen.basick.lintk.optins.OApiCall_BindLifecycle
+import com.mozhimen.basick.lintk.optins.OApiInit_ByLazy
 import com.mozhimen.navigatek.navigation.helpers.getDestinationId
 import com.mozhimen.navigatek.navigation.test.databinding.FragmentFirstBinding
 import com.mozhimen.navigatek.navigation.test.databinding.ItemNavigatekBinding
@@ -20,7 +20,7 @@ class FirstFragment : BaseFragmentVB<FragmentFirstBinding>() {
     private val _datas = mutableListOf(MKey("01", "01"))
     private var _adapter: AdapterKQuickRecyclerVB<MKey, ItemNavigatekBinding>? = null
 
-    @OptIn(OptInApiCall_BindLifecycle::class, OptInApiInit_ByLazy::class)
+    @OptIn(OApiCall_BindLifecycle::class, OApiInit_ByLazy::class)
     override fun initView(savedInstanceState: Bundle?) {
         //用法一
 //        vb.navigatekFragmentFirstTxt.setOnClickListener {

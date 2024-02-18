@@ -4,8 +4,8 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mozhimen.basick.elemk.androidx.fragment.bases.BaseFragmentVB
 import com.mozhimen.basick.elemk.mos.MKey
-import com.mozhimen.basick.lintk.optin.OptInApiCall_BindLifecycle
-import com.mozhimen.basick.lintk.optin.OptInApiInit_ByLazy
+import com.mozhimen.basick.lintk.optins.OApiCall_BindLifecycle
+import com.mozhimen.basick.lintk.optins.OApiInit_ByLazy
 import com.mozhimen.navigatek.navigation.helpers.getDestinationId
 import com.mozhimen.navigatek.navigation.test.databinding.FragmentThirdBinding
 import com.mozhimen.navigatek.navigation.test.databinding.ItemNavigatekBinding
@@ -15,7 +15,7 @@ class ForthFragment : BaseFragmentVB<FragmentThirdBinding>() {
     private val _datas = mutableListOf(MKey("01", "01"))
     private var _adapter: AdapterKQuickRecyclerVB<MKey, ItemNavigatekBinding>? = null
 
-    @OptIn(OptInApiCall_BindLifecycle::class, OptInApiInit_ByLazy::class)
+    @OptIn(OApiCall_BindLifecycle::class, OApiInit_ByLazy::class)
     override fun initView(savedInstanceState: Bundle?) {
         arguments?.getString(FirstFragment.KEY_FIRST,"这是原有的数据")?.let {
             vb.navigatekFragmentSecondTxt1.text = it

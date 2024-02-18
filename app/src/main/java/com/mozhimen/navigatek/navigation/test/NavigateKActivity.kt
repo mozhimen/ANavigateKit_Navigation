@@ -3,13 +3,13 @@ package com.mozhimen.navigatek.navigation.test
 import android.os.Bundle
 import androidx.navigation.ui.NavigationUI
 import com.mozhimen.basick.elemk.androidx.appcompat.bases.databinding.BaseActivityVB
-import com.mozhimen.basick.lintk.optin.OptInApiCall_BindLifecycle
-import com.mozhimen.basick.lintk.optin.OptInApiInit_ByLazy
+import com.mozhimen.basick.lintk.optins.OApiCall_BindLifecycle
+import com.mozhimen.basick.lintk.optins.OApiInit_ByLazy
 import com.mozhimen.navigatek.navigation.NavigateKActivityProxy
 import com.mozhimen.navigatek.navigation.mos.MNavigateKConfig
 import com.mozhimen.navigatek.navigation.test.databinding.ActivityNavigatekBinding
 
-@OptIn(OptInApiCall_BindLifecycle::class, OptInApiInit_ByLazy::class)
+@OptIn(OApiCall_BindLifecycle::class, OApiInit_ByLazy::class)
 class NavigateKActivity : BaseActivityVB<ActivityNavigatekBinding>() {
 
     private val _fragments = listOf(FirstFragment::class.java, SecondFragment::class.java)
