@@ -2,7 +2,7 @@ package com.mozhimen.navigatek.navigation.test
 
 import android.os.Bundle
 import androidx.navigation.ui.NavigationUI
-import com.mozhimen.basick.elemk.androidx.appcompat.bases.databinding.BaseActivityVB
+import com.mozhimen.basick.elemk.androidx.appcompat.bases.databinding.BaseActivityVDB
 import com.mozhimen.basick.lintk.optins.OApiCall_BindLifecycle
 import com.mozhimen.basick.lintk.optins.OApiInit_ByLazy
 import com.mozhimen.navigatek.navigation.NavigateKActivityProxy
@@ -10,7 +10,7 @@ import com.mozhimen.navigatek.navigation.mos.MNavigateKConfig
 import com.mozhimen.navigatek.navigation.test.databinding.ActivityNavigatekBinding
 
 @OptIn(OApiCall_BindLifecycle::class, OApiInit_ByLazy::class)
-class NavigateKActivity : BaseActivityVB<ActivityNavigatekBinding>() {
+class NavigateKActivity : BaseActivityVDB<ActivityNavigatekBinding>() {
 
     private val _fragments = listOf(FirstFragment::class.java, SecondFragment::class.java)
     private val _navigateKActivityProxy by lazy {
@@ -21,7 +21,7 @@ class NavigateKActivity : BaseActivityVB<ActivityNavigatekBinding>() {
     val navigateKProxy get() = _navigateKActivityProxy
 
     override fun initView(savedInstanceState: Bundle?) {
-//        setSupportActionBar(vb.navigatekToolbar)//如果没有toolbar
+//        setSupportActionBar(vdb.navigatekToolbar)//如果没有toolbar
         _navigateKActivityProxy.bindLifecycle(this)
         NavigationUI.setupActionBarWithNavController(this, _navigateKActivityProxy.navController)
     }

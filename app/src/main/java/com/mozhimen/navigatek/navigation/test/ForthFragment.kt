@@ -18,16 +18,16 @@ class ForthFragment : BaseFragmentVB<FragmentThirdBinding>() {
     @OptIn(OApiCall_BindLifecycle::class, OApiInit_ByLazy::class)
     override fun initView(savedInstanceState: Bundle?) {
         arguments?.getString(FirstFragment.KEY_FIRST,"这是原有的数据")?.let {
-            vb.navigatekFragmentSecondTxt1.text = it
+            vdb.navigatekFragmentSecondTxt1.text = it
         }
-        vb.navigatekFragmentSecondTxt2.setOnClickListener {
+        vdb.navigatekFragmentSecondTxt2.setOnClickListener {
             (parentFragment?.parentFragment as? SecondFragment)?.navigateKProxy?.startDestinationId(ThirdFragment::class.java.getDestinationId())
         }
 
         ///////////////////////////////////////////////////////////////////////
 
-        vb.navigatekFragmentSecondRecycler.layoutManager = LinearLayoutManager(requireActivity())
+        vdb.navigatekFragmentSecondRecycler.layoutManager = LinearLayoutManager(requireActivity())
         _adapter = AdapterKQuickRecyclerVB<MKey, ItemNavigatekBinding>(_datas, R.layout.item_navigatek, BR.item_navigatek)
-        vb.navigatekFragmentSecondRecycler.adapter = _adapter
+        vdb.navigatekFragmentSecondRecycler.adapter = _adapter
     }
 }

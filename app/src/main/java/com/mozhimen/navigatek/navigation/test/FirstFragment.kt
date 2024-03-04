@@ -23,11 +23,11 @@ class FirstFragment : BaseFragmentVB<FragmentFirstBinding>() {
     @OptIn(OApiCall_BindLifecycle::class, OApiInit_ByLazy::class)
     override fun initView(savedInstanceState: Bundle?) {
         //用法一
-//        vb.navigatekFragmentFirstTxt.setOnClickListener {
+//        vdb.navigatekFragmentFirstTxt.setOnClickListener {
 //            (requireActivity() as NavigateKActivity).navigateKProxy.startDestinationId(SecondFragment::class.java.getDestinationId())
 //        }
         //用法二
-        vb.navigatekFragmentFirstTxt.setOnClickListener(
+        vdb.navigatekFragmentFirstTxt.setOnClickListener(
             Navigation.createNavigateOnClickListener(
                 SecondFragment::class.java.getDestinationId(),
                 Bundle().apply { putString(KEY_FIRST, "这是Args数据") })
@@ -35,8 +35,8 @@ class FirstFragment : BaseFragmentVB<FragmentFirstBinding>() {
 
         ///////////////////////////////////////////////////////////////
 
-        vb.navigatekFragmentFirstRecycler.layoutManager = LinearLayoutManager(requireActivity())
+        vdb.navigatekFragmentFirstRecycler.layoutManager = LinearLayoutManager(requireActivity())
         _adapter = AdapterKQuickRecyclerVB<MKey, ItemNavigatekBinding>(_datas, R.layout.item_navigatek, BR.item_navigatek)
-        vb.navigatekFragmentFirstRecycler.adapter = _adapter
+        vdb.navigatekFragmentFirstRecycler.adapter = _adapter
     }
 }

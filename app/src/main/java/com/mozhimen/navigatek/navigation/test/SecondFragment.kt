@@ -22,9 +22,9 @@ class SecondFragment : BaseFragmentVB<FragmentSecondBinding>() {
     @OptIn(OApiCall_BindLifecycle::class, OApiInit_ByLazy::class)
     override fun initView(savedInstanceState: Bundle?) {
         arguments?.getString(FirstFragment.KEY_FIRST,"这是原有的数据")?.let {
-            vb.navigatekFragmentSecondTxt1.text = it
+            vdb.navigatekFragmentSecondTxt1.text = it
         }
-        vb.navigatekFragmentSecondTxt2.setOnClickListener {
+        vdb.navigatekFragmentSecondTxt2.setOnClickListener {
             (requireActivity() as NavigateKActivity).navigateKProxy.startDestinationId(FirstFragment::class.java.getDestinationId())
         }
 
