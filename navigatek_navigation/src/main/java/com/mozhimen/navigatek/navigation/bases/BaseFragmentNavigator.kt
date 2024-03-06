@@ -3,7 +3,7 @@ package com.mozhimen.navigatek.navigation.bases
 import android.content.Context
 import androidx.fragment.app.FragmentManager
 import androidx.navigation.Navigator
-import com.mozhimen.basick.utilk.bases.IUtilK
+import com.mozhimen.basick.utilk.commons.IUtilK
 import com.mozhimen.navigatek.navigation.bases.BaseFragmentDestination
 
 /**

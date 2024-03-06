@@ -10,7 +10,7 @@ import com.mozhimen.basick.lintk.optins.OApiInit_ByLazy
 import com.mozhimen.navigatek.navigation.helpers.getDestinationId
 import com.mozhimen.navigatek.navigation.test.databinding.FragmentFirstBinding
 import com.mozhimen.navigatek.navigation.test.databinding.ItemNavigatekBinding
-import com.mozhimen.uicorek.adapterk.quick.AdapterKQuickRecyclerVB
+import com.mozhimen.xmlk.adapterk.quick.AdapterKQuickRecyclerVB
 
 class FirstFragment : BaseFragmentVB<FragmentFirstBinding>() {
     companion object {

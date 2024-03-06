@@ -5,7 +5,7 @@ import android.app.Activity
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import com.mozhimen.basick.utilk.android.util.wt
-import com.mozhimen.basick.utilk.bases.IUtilK
+import com.mozhimen.basick.utilk.commons.IUtilK
 
 /**
  * @ClassName DestinationUtil

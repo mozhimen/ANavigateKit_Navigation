@@ -8,7 +8,7 @@ import androidx.navigation.*
 import androidx.navigation.fragment.DialogFragmentNavigator
 import androidx.navigation.fragment.FragmentNavigator
 import com.mozhimen.basick.utilk.android.content.UtilKContext
-import com.mozhimen.basick.utilk.bases.IUtilK
+import com.mozhimen.basick.utilk.commons.IUtilK
 import com.mozhimen.basick.utilk.kotlin.collections.joinT2list
 import com.mozhimen.navigatek.navigation.mos.MNavigateKConfig
 import com.mozhimen.navigatek.navigation.mos.MNavigateKPageInfo

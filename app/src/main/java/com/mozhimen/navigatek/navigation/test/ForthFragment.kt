@@ -9,7 +9,7 @@ import com.mozhimen.basick.lintk.optins.OApiInit_ByLazy
 import com.mozhimen.navigatek.navigation.helpers.getDestinationId
 import com.mozhimen.navigatek.navigation.test.databinding.FragmentThirdBinding
 import com.mozhimen.navigatek.navigation.test.databinding.ItemNavigatekBinding
-import com.mozhimen.uicorek.adapterk.quick.AdapterKQuickRecyclerVB
+import com.mozhimen.xmlk.adapterk.quick.AdapterKQuickRecyclerVB
 
 class ForthFragment : BaseFragmentVB<FragmentThirdBinding>() {
     private val _datas = mutableListOf(MKey("01", "01"))

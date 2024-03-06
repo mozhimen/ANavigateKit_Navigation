@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace 'com.mozhimen.navigatek.navigation.test'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.mozhimen.navigatek.navigation.test"
@@ -39,7 +39,7 @@ android {
 dependencies {
 
     implementation project(':SwiftKit:basick')
-    implementation project(':SwiftKit:uicorek')
+    implementation project(':SwiftKit:xmlk')
     implementation project(':navigatek_navigation')
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
