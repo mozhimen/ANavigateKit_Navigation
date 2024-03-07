@@ -2,7 +2,7 @@ package com.mozhimen.navigatek.navigation.test
 
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.mozhimen.basick.elemk.androidx.fragment.bases.BaseFragmentVB
+import com.mozhimen.basick.elemk.androidx.fragment.bases.databinding.BaseFragmentVDB
 import com.mozhimen.basick.elemk.mos.MKey
 import com.mozhimen.basick.lintk.optins.OApiCall_BindLifecycle
 import com.mozhimen.basick.lintk.optins.OApiInit_ByLazy
@@ -11,7 +11,7 @@ import com.mozhimen.navigatek.navigation.test.databinding.FragmentThirdBinding
 import com.mozhimen.navigatek.navigation.test.databinding.ItemNavigatekBinding
 import com.mozhimen.xmlk.adapterk.quick.AdapterKQuickRecyclerVB
 
-class ForthFragment : BaseFragmentVB<FragmentThirdBinding>() {
+class ForthFragment : BaseFragmentVDB<FragmentThirdBinding>() {
     private val _datas = mutableListOf(MKey("01", "01"))
     private var _adapter: AdapterKQuickRecyclerVB<MKey, ItemNavigatekBinding>? = null
 

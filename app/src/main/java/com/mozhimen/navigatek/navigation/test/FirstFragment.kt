@@ -3,7 +3,7 @@ package com.mozhimen.navigatek.navigation.test
 import android.os.Bundle
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.mozhimen.basick.elemk.androidx.fragment.bases.BaseFragmentVB
+import com.mozhimen.basick.elemk.androidx.fragment.bases.databinding.BaseFragmentVDB
 import com.mozhimen.basick.elemk.mos.MKey
 import com.mozhimen.basick.lintk.optins.OApiCall_BindLifecycle
 import com.mozhimen.basick.lintk.optins.OApiInit_ByLazy
@@ -12,7 +12,7 @@ import com.mozhimen.navigatek.navigation.test.databinding.FragmentFirstBinding
 import com.mozhimen.navigatek.navigation.test.databinding.ItemNavigatekBinding
 import com.mozhimen.xmlk.adapterk.quick.AdapterKQuickRecyclerVB
 
-class FirstFragment : BaseFragmentVB<FragmentFirstBinding>() {
+class FirstFragment : BaseFragmentVDB<FragmentFirstBinding>() {
     companion object {
         const val KEY_FIRST = "Title"
     }
