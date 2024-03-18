@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
-import com.mozhimen.basick.utilk.android.util.wt
+import com.mozhimen.basick.utilk.android.util.w
 import com.mozhimen.basick.utilk.commons.IUtilK
 
 /**
@@ -42,11 +42,11 @@ object DestinationUtil : IUtilK {
     @JvmStatic
     fun startDestinationId(navController: NavController, destinationId: Int) {
         if (!findNavigationId(navController, destinationId)) {
-            "startId don't find thid id".wt(TAG)
+            "startId don't find thid id".w(TAG)
             return
         }
         if (getCurrentDestinationId(navController) == destinationId) {
-            "startId current id is this id".wt(TAG)
+            "startId current id is this id".w(TAG)
             return
         }
         navController.navigate(destinationId)
