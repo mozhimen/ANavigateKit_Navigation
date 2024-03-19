@@ -65,7 +65,7 @@ open class ShowHideFragmentNavigator(
             return false
         }
         if (fragmentManager.isStateSaved) {
-            UtilKLogWrapper.dt(TAG, "Ignoring popBackStack() call: FragmentManager has already saved its state")
+            UtilKLogWrapper.d(TAG, "Ignoring popBackStack() call: FragmentManager has already saved its state")
             return false
         }
         fragmentManager.popBackStack(
@@ -129,7 +129,7 @@ open class ShowHideFragmentNavigator(
         navigatorExtras: Extras?
     ): NavDestination? {
         if (fragmentManager.isStateSaved) {
-            UtilKLogWrapper.dt(TAG, "Ignoring navigate() call: FragmentManager has already" + " saved its state")
+            UtilKLogWrapper.d(TAG, "Ignoring navigate() call: FragmentManager has already" + " saved its state")
             return null
         }
 
@@ -146,10 +146,10 @@ open class ShowHideFragmentNavigator(
         val isAdded: Boolean
         if (initialNavigation) {
             isAdded = true
-            UtilKLogWrapper.dt(TAG, "navigate: initialNavigation")
+            UtilKLogWrapper.d(TAG, "navigate: initialNavigation")
         } else if (isSingleTaskReplacement) {
             isAdded = false
-            UtilKLogWrapper.dt(TAG, "navigate: isSingleTaskReplacement")
+            UtilKLogWrapper.d(TAG, "navigate: isSingleTaskReplacement")
         } else if (isSingleTopReplacement) {
             // Single Top means we only want one instance on the back stack
             if (_backStack.size > 1) {
@@ -161,11 +161,11 @@ open class ShowHideFragmentNavigator(
                 ft.addToBackStack(generateBackStackName(_backStack.size, destId))
             }
             isAdded = false
-            UtilKLogWrapper.dt(TAG, "navigate: isSingleTopReplacement")
+            UtilKLogWrapper.d(TAG, "navigate: isSingleTopReplacement")
         } else {
             ft.addToBackStack(generateBackStackName(_backStack.size + 1, destId))
             isAdded = true
-            UtilKLogWrapper.dt(TAG, "navigate: else")
+            UtilKLogWrapper.d(TAG, "navigate: else")
         }
 
         if (navigatorExtras is BaseExtras) {
@@ -177,7 +177,7 @@ open class ShowHideFragmentNavigator(
         // The commit succeeded, update our view of the world
         return if (isAdded) {
             _backStack.add(destId)
-            UtilKLogWrapper.dt(TAG, "navigate: " + _backStack.size)
+            UtilKLogWrapper.d(TAG, "navigate: " + _backStack.size)
             destination
         } else if (isSingleTaskReplacement) {
             destination

@@ -68,10 +68,10 @@ internal class NavigateKFragmentDelegate(private val _activity: FragmentActivity
     ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
     private fun addDestinations(navGraph: NavGraph, navigatorProvider: NavigatorProvider, clazzes: List<Class<*>>, defaultDestinationId: Int) {
-        val pageInfos = createPageInfos(clazzes).also { UtilKLogWrapper.dt(TAG, "addDestinations: $it") }
+        val pageInfos = createPageInfos(clazzes).also { UtilKLogWrapper.d(TAG, "addDestinations: $it") }
         for (pageInfo in pageInfos)
             addDestination(navGraph, createDestination(navigatorProvider, pageInfo) ?: continue)
-        val destinationIds = pageInfos.joinT2list { it.id }.also { UtilKLogWrapper.dt(TAG, "addDestinations: defaultDestinationId $defaultDestinationId destinationIds $it") }
+        val destinationIds = pageInfos.joinT2list { it.id }.also { UtilKLogWrapper.d(TAG, "addDestinations: defaultDestinationId $defaultDestinationId destinationIds $it") }
         navGraph.setStartDestination(if (defaultDestinationId != 0 && defaultDestinationId in destinationIds) defaultDestinationId else destinationIds[0])
     }
 
